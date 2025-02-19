@@ -8,12 +8,14 @@
         </div>
         @endif
         <div class="data-user">
-            <a href="">
-                {{ $image->user->name.' '.$image->user->surname }}
-                <span class="nickname">
-                    {{ ' | @'.$image->user->nick }}
-                </span>
-            </a>
+            @if(Auth::check())
+                <a href="{{ route('user.profile', ['id' => $image->user->id]) }}">
+                    {{ $image->user->name.' '.$image->user->surname }}
+                    <span class="nickname">
+                        {{ ' | @'.$image->user->nick }}
+                    </span>
+                </a>
+            @endif
         </div>
     </div>
 
