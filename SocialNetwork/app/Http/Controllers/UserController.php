@@ -93,7 +93,9 @@ class UserController extends Controller
 
     public function profile($id)
     {
-        $user = User::find($id);
+        $user = User::with(['images' => function ($query) {
+            $query->orderBy('created_at', 'desc'); // Ordenar por fecha de creación descendente
+        }])->find($id);
         return view('user.profile', [
             'user' => $user
         ]);

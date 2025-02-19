@@ -7,7 +7,7 @@
             <?php //include the message view ?>
             @include('includes.message')
             <div class="card pub_image pub_image_detail">
-                @include('includes.image')
+                @include('includes.image2')
                 @if(Auth::user() && Auth::user()->id == $image->user->id)
                     <div class="actions">
                         <a href="{{ route('image.edit',['id'=>$image->id]) }}" class="btn btn-sm btn-primary">Update</a>
@@ -41,21 +41,6 @@
                 
                 <!-- comments -->
                 <div class="comments">
-                    <h2>Comments ({{ count($image->comments) }})</h2>
-                    <hr>
-                    <form method="POST" action="{{ route('comment.save') }}" class="m-2">
-                        @csrf
-                        <input type="hidden" name="image_id" value="{{ $image->id }}">
-                        <p>
-                            <textarea class="form-control {{ $errors->has('content') ? 'is-invalid' : '' }}" name="content"></textarea>
-                            @if($errors->has('content'))
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $errors->first('content') }}</strong>
-                                </span>
-                            @endif
-                        </p>
-                        <button type="submit" class="btn btn-success m-2">Send</button>
-                    </form>
                     <hr>
                     @foreach($image->comments as $comment)
                         <div class="comment">
@@ -73,6 +58,20 @@
                             @endif
                         </div>
                     @endforeach
+                    <hr>
+                    <form method="POST" action="{{ route('comment.save') }}" class="m-2">
+                        @csrf
+                        <input type="hidden" name="image_id" value="{{ $image->id }}">
+                        <p>
+                            <textarea class="form-control {{ $errors->has('content') ? 'is-invalid' : '' }}" name="content"></textarea>
+                            @if($errors->has('content'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('content') }}</strong>
+                                </span>
+                            @endif
+                        </p>
+                        <button type="submit" class="btn btn-success">Send</button>
+                    </form>
                 </div>
             </div>
         </div>

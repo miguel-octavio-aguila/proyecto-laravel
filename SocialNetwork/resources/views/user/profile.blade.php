@@ -5,7 +5,6 @@
 <div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-md-8">
-
             <!-- user profile -->
             <div class="profile-user d-flex flex-column align-items-center text-center">
                 @if($user->image)
@@ -29,6 +28,36 @@
             @foreach($user->images as $image)
                 <div class="card pub_image">
                     @include('includes.image2',['image'=>$image])
+                    @if(Auth::user() && Auth::user()->id == $image->user->id)
+                        <div class="actions">
+                            <a href="{{ route('image.edit',['id'=>$image->id]) }}" class="btn btn-sm btn-primary">Update</a>
+                            <!-- Button to open the modal -->
+                            <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#myModal">
+                                Delete
+                            </button>
+                            <!-- The Modal -->
+                            <div class="modal fade" id="myModal" tabindex="-1"  aria-labelledby="exampleModalLabel">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Are you sure?</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            If you delete this post, you will not be able to recover it. Are you sure you want to delete it?
+                                        </div>
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                            <a href="{{ route('image.delete', ['id' => $image->id]) }}" class="btn btn-danger">Delete definitively</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
                 </div>
             @endforeach
         </div>

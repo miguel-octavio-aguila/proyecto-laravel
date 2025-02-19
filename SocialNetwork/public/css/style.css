@@ -103,7 +103,7 @@ form .avatar{
 /*comments*/
 
 .pug_image_detail .comments{
-    padding: 20px;
+    padding: 0px;
 }
 
 /* users */
