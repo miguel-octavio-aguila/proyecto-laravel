@@ -87,7 +87,7 @@ form .avatar{
 /*likes*/
 .likes{
     float: left;
-    padding-left: 20px;
+    padding-left: 0px;
     padding-right: 10px;
 }
 
@@ -101,11 +101,6 @@ form .avatar{
 }
 
 /*comments*/
-.pub_image .btn-comments{
-    margin: 20px;
-    margin-top: 0px;
-    margin-left: 0px;
-}
 
 .pug_image_detail .comments{
     padding: 20px;

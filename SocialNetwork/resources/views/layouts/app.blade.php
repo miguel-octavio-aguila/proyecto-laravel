@@ -66,7 +66,7 @@
                                 <a class="nav-link text-white" href="{{ route('like.index') }}">Likes</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="{{ route('image.create') }}">Posts</a>
+                                <a class="nav-link text-white" href="{{ route('image.create') }}">Make a post</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="#">
@@ -82,7 +82,9 @@
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <!-- links added -->
-                                    <a class="dropdown-item" href="">Profile</a>
+                                    @if(Auth::check())
+                                        <a class="dropdown-item" href="{{ route('user.profile', ['id' => Auth::user()->id]) }}">Profile</a>
+                                    @endif
                                     <a class="dropdown-item" href="{{ route('config') }}">Settings</a>
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"

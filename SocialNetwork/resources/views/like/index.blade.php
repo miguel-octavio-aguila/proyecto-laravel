@@ -10,14 +10,7 @@
 
             @foreach($likes as $like)
                 <div class="card pub_image">
-                    @include('includes.image',['image'=>$like->image])
-
-                    <!-- show the comments -->
-                    <div class="comments m-2">
-                        <a href="{{ route('image.detail',['id'=>$like->image->id]) }}" class="btn btn-sm btn-warning btn-comments">
-                            Comments ({{ count($like->image->comments) }})
-                        </a>
-                    </div>
+                    @include('includes.image2',['image'=>$like->image])
                 </div>
             @endforeach
 

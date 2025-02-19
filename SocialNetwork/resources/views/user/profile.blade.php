@@ -28,14 +28,7 @@
             <hr>
             @foreach($user->images as $image)
                 <div class="card pub_image">
-                    @include('includes.image',['image'=>$image])
-
-                    <!-- show the comments -->
-                    <div class="comments m-2">
-                        <a href="{{ route('image.detail',['id'=>$image->id]) }}" class="btn btn-sm btn-warning btn-comments">
-                            Comments ({{ count($image->comments) }})
-                        </a>
-                    </div>
+                    @include('includes.image2',['image'=>$image])
                 </div>
             @endforeach
         </div>
