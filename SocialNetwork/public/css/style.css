@@ -146,3 +146,27 @@ hr:first-of-type {
     background: black !important; /* Aplica el color correctamente */
     width: 100%; /* Ancho total */
 }
+
+.pagination .page-item .page-link {
+    color: black !important; /* Texto negro */
+    background-color: white !important; /* Fondo blanco */
+    border-color: black !important; /* Borde negro */
+}
+
+.pagination .page-item.active .page-link {
+    color: white !important; /* Texto blanco */
+    background-color: black !important; /* Fondo negro */
+    border-color: black !important; /* Borde negro */
+}
+
+.pagination .page-item.disabled .page-link {
+    color: gray !important; /* Texto gris */
+    background-color: #e9ecef !important; /* Fondo gris */
+    border-color: gray !important; /* Borde gris */
+}
+
+.pagination .page-item .page-link:hover {
+    color: white !important; /* Texto blanco */
+    background-color: black !important; /* Fondo negro */
+    border-color: black !important; /* Borde negro */
+}

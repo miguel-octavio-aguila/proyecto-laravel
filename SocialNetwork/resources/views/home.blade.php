@@ -12,7 +12,9 @@
             </div>
             @endforeach
             <!-- create pagination -->
-            {{$images->render()}}
+            <div class="pagination flex justify-center mt-4">
+                {{ $images->links() }}
+            </div>
         </div>
     </div>
 </div>
