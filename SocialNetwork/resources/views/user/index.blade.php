@@ -13,7 +13,7 @@
                         <input type="text" id="search" class="form-control">
                     </div>
                     <div class="form-group col btn-search">
-                        <input type="submit" value="Search" class="btn btn-success">
+                        <input type="submit" value="Search" class="btn btn-dark">
                     </div>
                 </div>
             </form>
@@ -34,7 +34,7 @@
                         <p>
                         {{ 'Sign up: '.\FormatTime::formatTime($user->created_at) }}
                         </p>
-                        <a href="{{ route('user.profile', ['id' => $user->id]) }}" class="btn btn-success">View profile</a>
+                        <a href="{{ route('user.profile', ['id' => $user->id]) }}" class="btn btn-dark">View profile</a>
                     </div>
                 </div>
                 <hr>
