@@ -10,7 +10,7 @@
                 @include('includes.image2')
                 @if(Auth::user() && Auth::user()->id == $image->user->id)
                     <div class="actions">
-                        <a href="{{ route('image.edit',['id'=>$image->id]) }}" class="btn btn-sm btn-primary">Update</a>
+                        <a href="{{ route('image.edit',['id'=>$image->id]) }}" class="btn btn-sm btn-dark">Update</a>
                         <!-- Button to open the modal -->
                         <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#myModal">
                             Delete
