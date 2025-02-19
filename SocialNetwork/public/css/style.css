@@ -1,0 +1,153 @@
+/*change the burger color*/
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* Settings avatar */
+form .avatar{
+    width: 55px;
+    margin-bottom: 15px;
+}
+
+/* avatar container */
+.navbar .container-avatar,
+.pub_image .container-avatar{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+/* avatar inside of the container */
+.navbar .container-avatar img,
+.pub_image .container-avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Settings avatar */
+.pub_image{
+    margin-bottom: 25px;
+}
+
+.pub_image .container-avatar{
+    float: left;
+    margin-right: 10px;
+}
+
+.pub_image .data-user{
+    font-weight: bold;
+    line-height: 35px;
+}
+
+.pub_image .data-user a{
+    color: #444;
+    text-decoration: none;
+}
+
+.pub_image .nickname{
+    color: gray;
+    text-decoration: none;
+}
+
+.image-container {
+    width: 100%;
+    height: 400px; /* Altura fija */
+    display: flex; /* Centrar la imagen horizontal y verticalmente */
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    background-color: #f9f9f9; /* Color de fondo para los espacios vacíos */
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ajusta la imagen sin recortarla */
+}
+
+/* description */
+.pub_image .card_body{
+    padding: 0px;
+}
+
+.pub_image .description{
+    padding: 20px;
+    padding-bottom: 0px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+/*likes*/
+.likes{
+    float: left;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.likes img{
+    width: 20px;
+}
+
+.number_likes{
+    color: gray;
+    font-size: 11px;
+}
+
+/*comments*/
+.pub_image .btn-comments{
+    margin: 20px;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.pug_image_detail .comments{
+    padding: 20px;
+}
+
+/* users */
+.profile-user{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.profile-user .container-avatar{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-user .container-avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-user .user-info {
+    flex-grow: 1; /* Permite que la información ocupe el espacio restante */
+}
+
+.profile-user .user-info h3,
+.profile-user .user-info h4,
+.profile-user .user-info p {
+    margin: 5px 0; /* Espaciado entre los elementos de texto */
+}
+
+hr:first-of-type {
+    height: 10px; /* Grosor de la línea */
+    border: none; /* Elimina el borde predeterminado */
+    background: black !important; /* Aplica el color correctamente */
+    width: 100%; /* Ancho total */
+}
