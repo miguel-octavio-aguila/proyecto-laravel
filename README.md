@@ -95,37 +95,6 @@ Ensure you have the following installed:
 - Composer
 - MySQL
 - Node.js & npm
-
-### Steps
-1. **Clone the repository**:
-   ```sh
-   git clone https://github.com/yourusername/laravel-social.git
-   cd laravel-social
-   ```
-2. **Install dependencies**:
-   ```sh
-   composer install
-   npm install && npm run dev
-   ```
-3. **Set up environment variables**:
-   ```sh
-   cp .env.example .env
-   php artisan key:generate
-   ```
-   Configure database settings in `.env`:
-   ```env
-   DB_DATABASE=your_database
-   DB_USERNAME=your_username
-   DB_PASSWORD=your_password
-   ```
-4. **Run migrations & seed data**:
-   ```sh
-   php artisan migrate --seed
-   ```
-5. **Start the server**:
-   ```sh
-   php artisan serve
-   ```
    
 ## 👨‍💻 Author
 **Name:** Miguel Octavio Aguila  
