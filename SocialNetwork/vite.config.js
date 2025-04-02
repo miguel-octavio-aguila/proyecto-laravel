@@ -26,4 +26,12 @@ export default defineConfig({
             vue: 'vue/dist/vue.esm-bundler.js',
         },
     },
+    // Agrega esta sección para configurar el servidor de Vite
+    server: {
+        host: '0.0.0.0',
+        hmr: {
+            host: 'social-network.com',
+        },
+        cors: true,
+    },
 });
